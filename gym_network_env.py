@@ -38,8 +38,6 @@ class ITNetworkEnv(gym.Env):
 
         # Action space: the index of the target node
         self.action_space = [idx for idx in self.graph[node]]
-        print(self.action_space)
-        # self.action_space = gym.spaces.Discrete(len(self.graph[node]))
 
     def reset(self):
         """Reset the environment to the start node"""
@@ -50,7 +48,6 @@ class ITNetworkEnv(gym.Env):
     def step(self, action):
         """Step through the environment based on a provided action"""
 
-        # target_node = list(self.graph[self.current_node])[action]
         target_node = list(self.graph.nodes)[action]
 
         if self.graph.nodes[target_node]["allowed"]:
