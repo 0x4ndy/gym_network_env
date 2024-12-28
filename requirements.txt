@@ -1,0 +1,4 @@
+networkx
+gymnasium
+matplotlib
+PyQt5
